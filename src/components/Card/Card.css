@@ -1,0 +1,14 @@
+.card {
+    text-align: center;
+    position: relative;
+    width: 250px;
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+    background-color: white;
+}
+
+img {
+    height: 250px;
+    width: 250px;
+}

@@ -1,0 +1,12 @@
+.jumbotron {
+    background: url('./tv.jpg');
+    background-size: 100%;
+    height: 300px;
+}
+
+h1 {
+    font-size: 60px;
+    text-align: center;
+    color: blueviolet;
+    font-family: 'Righteous', cursive;
+}
