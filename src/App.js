@@ -3,6 +3,7 @@ import Card from './components/Card/Card.js';
 import Wrapper from './components/Wrapper/Wrapper.js';
 import Jumbotron from './components/Jumbotron/Jumbotron.js';
 import {shows} from './images/shows.js';
+const shuffle = require('shuffle-array');
 
 class App extends Component {
   state = {
@@ -17,8 +18,8 @@ class App extends Component {
   };
 
   handleClick = id => {
+    shuffle(this.state.shows);
     if (!this.clicked(id)) {
-      
       this.setState({score: this.state.score + 1});
       if (this.state.score === 11) {
         alert("You win!");
