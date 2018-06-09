@@ -9,8 +9,8 @@ class App extends Component {
   state = {
     shows,
     score: 0,
-    showsClicked: []
-
+    showsClicked: [],
+    highScore: 0
   }
 
   clicked = id => {
@@ -22,11 +22,13 @@ class App extends Component {
     if (!this.clicked(id)) {
       this.setState({score: this.state.score + 1});
       if (this.state.score === 11) {
+        this.setState({highScore: this.state.score});
         this.reset();
       }
       const newClick = this.state.showsClicked.concat(id);
       this.setState({showsClicked: newClick});
     } else {
+        this.setState({highScore: this.state.score});
         this.reset();
     }
   };
@@ -42,7 +44,7 @@ class App extends Component {
         <Jumbotron>
             <h1>The Greatest Era of TV Shows!</h1>
             <h1>Click each picture only once!</h1>
-            <h1>Score: {this.state.score}</h1>
+            <h1>Score: {this.state.score} High Score: {this.state.highScore}</h1>
         </Jumbotron>
         {this.state.shows.map(show => (
           <Card
