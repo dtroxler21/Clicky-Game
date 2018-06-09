@@ -21,7 +21,7 @@ class App extends Component {
     shuffle(this.state.shows);
     if (!this.clicked(id)) {
       this.setState({score: this.state.score + 1});
-      if (this.state.score === 11) {
+      if (this.state.score === 12) {
         this.setState({highScore: this.state.score});
         this.reset();
       }
