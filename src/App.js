@@ -22,13 +22,11 @@ class App extends Component {
     if (!this.clicked(id)) {
       this.setState({score: this.state.score + 1});
       if (this.state.score === 11) {
-        alert("You win!");
         this.reset();
       }
       const newClick = this.state.showsClicked.concat(id);
       this.setState({showsClicked: newClick});
     } else {
-        alert("You lose!")
         this.reset();
     }
   };
